@@ -1109,3 +1109,85 @@ h6 {
     color: var(--color-primary);
     text-decoration: underline;
 }
+/* =========================================
+   LEGAL PAGES STYLES (Privacy, Cookies, etc)
+   ========================================= */
+.pages {
+    padding-top: 140px;
+    /* Отступ сверху, чтобы текст не заезжал под хедер */
+    min-height: 80vh;
+}
+
+.page-title {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    line-height: 1.1;
+}
+
+@media (max-width: 768px) {
+    .page-title {
+        font-size: 2.2rem;
+    }
+}
+
+.page-content {
+    max-width: 800px;
+    /* Ограничиваем ширину текста для удобства чтения */
+}
+
+.page-content h2 {
+    font-family: var(--font-head);
+    color: #fff;
+    font-size: 1.8rem;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.page-content p {
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+.page-content ul {
+    list-style: none;
+    margin-bottom: 30px;
+    padding-left: 10px;
+}
+
+.page-content li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+}
+
+.page-content li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+.page-content strong {
+    color: #fff;
+    font-weight: 600;
+}
+
+.page-content a {
+    color: var(--color-primary);
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.3s ease;
+}
+
+.page-content a:hover {
+    color: #fff;
+    text-decoration-color: #fff;
+}
