@@ -1,56 +1,386 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/quantis-edge/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quantis Edge | AI для обычных людей</title>
+
+  <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Space+Grotesk:wght@500;700&display=swap"
+    rel="stylesheet">
+
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.29/bundled/lenis.min.js"></script>
+
+<script src="https://unpkg.com/split-type"></script>
     <script type="module" crossorigin src="/quantis-edge/index.js"></script>
-    <link rel="stylesheet" crossorigin href="/quantis-edge/assets/styles-guStct1H.css">
+    <link rel="stylesheet" crossorigin href="/quantis-edge/assets/styles-D9ivI7cN.css">
   </head>
   <body>
+    <div class="bg-grid"></div>
     <header class="header">
-  <div class="container">
-    <nav class="nav">
-      <a class="nav-logo" href="./index.html" aria-label="Site logo">
-        <svg class="nav-logo-icon" width="100" height="30">
-          <use href="{=$icon-path}"></use>
-        </svg>
-      </a>
-      <ul class="nav-list">
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-act}" href="./page-2.html">Page 2</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link {=$highlight-curr}" href="./page-3.html">Page 3</a>
-        </li>
+  <div class="container header__container">
+    <a href="#" class="header__logo">
+      Quantis<span class="text-accent">Edge</span>
+    </a>
+
+    <nav class="header__nav">
+      <ul class="header__menu">
+        <li class="header__item"><a href="#" class="header__link">Главная</a></li>
+        <li class="header__item"><a href="#features" class="header__link">Практики AI</a></li>
+        <li class="header__item"><a href="#innovation" class="header__link">Инновации</a></li>
+        <li class="header__item"><a href="#blog" class="header__link">Блог</a></li>
       </ul>
     </nav>
+
+    <div class="header__actions">
+      <a href="#contact" class="btn btn--small">Контакты</a>
+      <button class="header__burger" aria-label="Menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__content">
+      <a href="#" class="mobile-menu__link">Главная</a>
+      <a href="#features" class="mobile-menu__link">Практики AI</a>
+      <a href="#innovation" class="mobile-menu__link">Инновации</a>
+      <a href="#blog" class="mobile-menu__link">Блог</a>
+      <a href="#contact" class="mobile-menu__link mobile-menu__link--cta">Контакты</a>
+    </div>
   </div>
 </header>
 
-
-    <main>
+    <main class="main-content">
       <!-- Loads the specified .html file -->
-      
+      <section class="hero" id="hero">
+    <div class="hero__glow"></div>
+
+    <div class="container hero__container">
+        <div class="hero__content">
+            <div class="hero__badge">
+                <span class="hero__badge-dot"></span>
+                Платформа уже доступна в Европе
+            </div>
+
+            <h1 class="hero__title">
+                Ваш личный<br>
+                <span class="text-accent">AI-ассистент</span><br>
+                для жизни
+            </h1>
+
+            <p class="hero__subtitle">
+                Quantis Edge — это передовая цифровая инфраструктура, которая делает сложные технологии простыми.
+                Воплотите мечты в реальность с помощью алгоритмов нового поколения.
+            </p>
+
+            <div class="hero__actions">
+                <a href="#contact" class="btn">Начать сейчас</a>
+                <a href="#features" class="btn btn--outline">Узнать детали</a>
+            </div>
+        </div>
+
+        <div class="hero__visual">
+            <div class="hero__circle"></div>
+            <div class="hero__circle hero__circle--inner"></div>
+        </div>
+    </div>
+</section>
+<section class="section about" id="about">
+    <div class="container about__container">
+        <div class="about__content" data-aos="fade-up">
+            <h2 class="section-title">Технология <span class="text-accent">нового поколения</span></h2>
+            <p class="section-desc">
+                Мы объединили передовую цифровую инфраструктуру и простой интерфейс.
+                Вам не нужно быть программистом, чтобы использовать мощь нейросетей.
+                Quantis Edge анализирует миллионы данных в секунду, предлагая вам готовые решения.
+            </p>
+            <ul class="about__list">
+                <li class="about__item">
+                    <i data-lucide="check-circle" class="text-accent"></i>
+                    <span>Инновационная технология анализа данных</span>
+                </li>
+                <li class="about__item">
+                    <i data-lucide="check-circle" class="text-accent"></i>
+                    <span>Удобная адаптация без сложностей</span>
+                </li>
+                <li class="about__item">
+                    <i data-lucide="check-circle" class="text-accent"></i>
+                    <span>Стратегия роста на базе инноваций</span>
+                </li>
+            </ul>
+        </div>
+        <div class="about__image-wrapper" data-aos="fade-left">
+            <div class="code-visual">
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-line"></div>
+                <div class="code-box">AI CORE</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section features" id="features">
+    <div class="container">
+        <h2 class="section-title center">Почему <span class="text-accent">выбирают нас</span></h2>
+        <div class="features__grid">
+            <div class="card feature-card">
+                <div class="feature-card__icon">
+                    <i data-lucide="zap"></i>
+                </div>
+                <h3 class="feature-card__title">Быстрый старт</h3>
+                <p class="feature-card__text">Подключение занимает 2 минуты. Легко разобраться без опыта.</p>
+            </div>
+            <div class="card feature-card">
+                <div class="feature-card__icon">
+                    <i data-lucide="trending-up"></i>
+                </div>
+                <h3 class="feature-card__title">Реальный рост</h3>
+                <p class="feature-card__text">Технологии, которые работают на вас. Оцените перспективы проекта уже
+                    сегодня.</p>
+            </div>
+            <div class="card feature-card">
+                <div class="feature-card__icon">
+                    <i data-lucide="shield-check"></i>
+                </div>
+                <h3 class="feature-card__title">Надежность</h3>
+                <p class="feature-card__text">Проверенный партнер. Экспертная поддержка на всех этапах.</p>
+            </div>
+            <div class="card feature-card">
+                <div class="feature-card__icon">
+                    <i data-lucide="globe"></i>
+                </div>
+                <h3 class="feature-card__title">Глобальный доступ</h3>
+                <p class="feature-card__text">Платформа уже доступна в Европе. Работайте из любой точки мира.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section innovation" id="innovation">
+    <div class="container innovation__container">
+        <div class="innovation__visual" data-aos="fade-right">
+            <div class="glass-card">
+                <div class="glass-stat">
+                    <span class="glass-stat__num">98%</span>
+                    <span class="glass-stat__label">Точность алгоритмов</span>
+                </div>
+                <div class="glass-stat">
+                    <span class="glass-stat__num">24/7</span>
+                    <span class="glass-stat__label">Анализ рынка</span>
+                </div>
+            </div>
+        </div>
+        <div class="innovation__content" data-aos="fade-left">
+            <h2 class="section-title">Инновации <br>на пальцах</h2>
+            <p class="section-desc">
+                Наши алгоритмы обучаются в реальном времени. Это не просто программа,
+                это решения, которые меняют правила игры.
+            </p>
+            <div class="steps">
+                <div class="step">
+                    <span class="step__num">01</span>
+                    <div class="step__info">
+                        <h4>Сбор данных</h4>
+                        <p>Система сканирует тысячи источников информации.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step__num">02</span>
+                    <div class="step__info">
+                        <h4>AI-Анализ</h4>
+                        <p>Нейросеть выявляет лучшие возможности для старта.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <span class="step__num">03</span>
+                    <div class="step__info">
+                        <h4>Результат</h4>
+                        <p>Вы получаете готовую стратегию действий.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section blog" id="blog">
+    <div class="container">
+        <h2 class="section-title center">База <span class="text-accent">знаний</span></h2>
+        <div class="blog__grid">
+            <article class="card blog-card">
+                <div class="blog-card__image">
+                    <div class="blog-placeholder">AI</div>
+                </div>
+                <div class="blog-card__body">
+                    <span class="blog-card__date">08.12.2025</span>
+                    <h3 class="blog-card__title">Как AI меняет рынок труда?</h3>
+                    <p class="blog-card__desc">Переосмыслите подход к карьере с новыми инструментами.</p>
+                    <a href="#contact" class="link-arrow">Читать далее <i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+            <article class="card blog-card">
+                <div class="blog-card__image">
+                    <div class="blog-placeholder">TECH</div>
+                </div>
+                <div class="blog-card__body">
+                    <span class="blog-card__date">05.12.2025</span>
+                    <h3 class="blog-card__title">5 мифов об искусственном интеллекте</h3>
+                    <p class="blog-card__desc">Разбираем популярные заблуждения простых пользователей.</p>
+                    <a href="#contact" class="link-arrow">Читать далее <i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+            <article class="card blog-card">
+                <div class="blog-card__image">
+                    <div class="blog-placeholder">PRO</div>
+                </div>
+                <div class="blog-card__body">
+                    <span class="blog-card__date">01.12.2025</span>
+                    <h3 class="blog-card__title">Старт в AI без навыков программирования</h3>
+                    <p class="blog-card__desc">Пошаговый путь, понятный каждому новичку.</p>
+                    <a href="#contact" class="link-arrow">Читать далее <i data-lucide="arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<section class="section contact" id="contact">
+    <div class="container contact__container">
+<div class="contact__info">
+    <h2 class="section-title">Остались <span class="text-accent">вопросы?</span></h2>
+    <p class="section-desc">
+        Запишитесь на бесплатную консультацию. Наши эксперты помогут оценить перспективы вашего проекта.
+    </p>
+    <div class="contact__details">
+        <div class="contact__item">
+            <i data-lucide="mail"></i>
+            <span>support@quantis-edge.org</span>
+        </div>
+        <div class="contact__item">
+            <i data-lucide="phone"></i>
+            <span>+44 20 7123 4567</span>
+        </div>
+        <div class="contact__item">
+            <i data-lucide="map-pin"></i>
+            <span>London, UK</span>
+        </div>
+    </div>
+</div>
+
+        <form class="contact__form" id="contactForm" novalidate>
+            <h3 class="form-title">Заполните форму</h3>
+
+            <div class="form-group">
+                <label for="name" class="form-label">Ваше имя</label>
+                <input type="text" id="name" class="form-input" placeholder="Иван Петров" required>
+                <span class="error-msg">Введите имя</span>
+            </div>
+
+            <div class="form-group">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" id="email" class="form-input" placeholder="name@example.com" required>
+                <span class="error-msg">Введите корректный email</span>
+            </div>
+
+            <div class="form-group">
+                <label for="phone" class="form-label">Телефон</label>
+                <input type="tel" id="phone" class="form-input" placeholder="+44..." required pattern="[0-9+ ]*">
+                <span class="error-msg">Только цифры</span>
+            </div>
+
+            <div class="form-group captcha-group">
+                <label class="form-label">Сколько будет <span id="captchaQuestion"></span>?</label>
+                <input type="number" id="captchaAnswer" class="form-input" required>
+                <span class="error-msg">Неверный ответ</span>
+            </div>
+
+            <div class="form-group checkbox-group">
+                <input type="checkbox" id="consent" required>
+                <label for="consent">Я согласен с <a href="./privacy.html">Политикой конфиденциальности</a></label>
+            </div>
+
+            <button type="submit" class="btn btn--full">Отправить заявку</button>
+
+            <div class="form-success" id="formSuccess">
+                <i data-lucide="check-circle"></i>
+                <p>Спасибо! Данные успешно отправлены.</p>
+            </div>
+        </form>
+    </div>
+</section>
     </main>
 
     <footer class="footer">
-  <div class="container">
-    <p class="footer-desc">
-      Made with ✨ by
-      <a
-        class="footer-link"
-        href="https://goit.global/ua/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        GoIT team
+  <div class="container footer__container">
+    <div class="footer__col">
+      <a href="#" class="footer__logo">
+        Quantis<span class="text-accent">Edge</span>
       </a>
-    </p>
+      <p class="footer__desc">
+        Технологии, которые работают на вас. Ваш проводник в мир прикладного искусственного интеллекта.
+      </p>
+      <p class="footer__copyright">© 2025 Quantis Edge. Все права защищены.</p>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__title">Навигация</h3>
+      <ul class="footer__list">
+        <li><a href="#" class="footer__link">Главная</a></li>
+        <li><a href="#features" class="footer__link">Возможности</a></li>
+        <li><a href="#innovation" class="footer__link">Технологии</a></li>
+        <li><a href="#blog" class="footer__link">Обучение</a></li>
+      </ul>
+    </div>
+
+    <div class="footer__col">
+      <h3 class="footer__title">Информация</h3>
+      <ul class="footer__list">
+        <li><a href="privacy.html" class="footer__link">Privacy Policy</a></li>
+        <li><a href="cookies.html" class="footer__link">Cookie Policy</a></li>
+        <li><a href="terms.html" class="footer__link">Terms of Use</a></li>
+        <li><a href="return.html" class="footer__link">Return Policy</a></li>
+        <li><a href="disclaimer.html" class="footer__link">Disclaimer</a></li>
+        <li><a href="personal-data-policy.html" class="footer__link">Data Policy</a></li>
+      </ul>
+    </div>
+
+<div class="footer__col">
+  <h3 class="footer__title">Контакты</h3>
+  <ul class="footer__contacts">
+    <li class="footer__contact-item">
+      <i data-lucide="map-pin" class="footer__icon"></i>
+      <span>100 Liverpool Street, London EC2M 2RH, UK</span>
+    </li>
+    <li class="footer__contact-item">
+      <i data-lucide="phone" class="footer__icon"></i>
+      <a href="tel:+442071234567">+44 20 7123 4567</a>
+    </li>
+    <li class="footer__contact-item">
+      <i data-lucide="mail" class="footer__icon"></i>
+      <a href="mailto:support@quantis-edge.org">support@quantis-edge.org</a>
+    </li>
+  </ul>
+</div>
   </div>
 </footer>
-
+    <div class="cookie-popup" id="cookiePopup">
+      <p class="cookie-text">
+        Этот сайт использует cookies для улучшения работы. Подробнее — в нашей <a href="./cookies.html">Cookie политике</a>.
+      </p>
+      <button class="btn btn--small" id="cookieAccept">Принять</button>
+    </div>
 
   </body>
 </html>
